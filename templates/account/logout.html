@@ -1,0 +1,8 @@
+{% extends '../base_login.html' %}
+    {% block title %}
+    <title>Blog Logout</title>
+    {% endblock %}
+
+    {% block prompt %}
+        <p style='font-size: 25px'>你现在已经退出，可以重新 <a href="{% url 'account:user_login' %}">登陆 </a></p>
+    {% endblock %}
