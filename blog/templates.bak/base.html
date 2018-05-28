@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的有道笔记</title>
+    <style type="text/css">
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .headline {
+            height: 10%;
+            background-color: #3b8dd5;
+        }
+
+        .h_logo {
+                width: 13%;
+                font-size: 20px;
+                text-align: center;
+                float: left;
+                line-height: 55px;
+                vertical-align: middle;
+            color: white;
+        }
+
+        .left_menu {
+                width: 7%;
+                font-size: 15px;
+                /*border: 1px solid black;*/
+                float: left;
+                text-align: center;
+                line-height: 55px;
+                vertical-align: middle;
+        }
+
+        .a_menu {
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+        }
+
+        .dir {
+                width: 25%;
+                height: 100%;
+                float: left;
+                /*border: 1px solid black;*/
+                text-align: center;
+                font-weight: bold;
+                /*line-height: 10px;*/
+        }
+
+        .content {
+                width: 84%;
+                height: 92%;
+                float: right;
+                /*border: 1px solid black;*/
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="headline">
+
+        <div class="h_logo">
+            有道笔记
+        </div>
+
+        {% block labels %}
+
+        {% endblock %}
+
+
+    </div>
+
+    <div class="dir">
+        {% block dir %}
+        {% endblock %}
+    </div>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+
+
+</body>
+</html>

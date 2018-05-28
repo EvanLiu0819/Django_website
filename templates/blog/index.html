@@ -1,0 +1,28 @@
+{% extends '../base.html' %}
+
+{% block labels %}
+
+    {% for label in labels %}
+        <div class="left_menu">
+            <!--{{ label.id }}-->
+            <a class="a_menu" href="http://127.0.0.1:8080/blog/{{ label.id }}">{{ label }}</a>
+        </div>
+    {% endfor %}
+
+{% endblock %}
+
+{% block dir %}
+    {% for name in dirs %}
+        <div class="name_menu">
+            <a class="a_name" href="{{ name.id }}">{{ name }}</a>
+        </div>
+    {% endfor %}
+
+{% endblock %}
+
+{% block content %}
+        <h3>
+            Welcome visit to My first Blog system!!
+        </h3>
+
+{% endblock %}

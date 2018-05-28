@@ -1,0 +1,59 @@
+{% extends '../base_login.html' %}
+    {% block title %}
+    <title>Blog Register</title>
+    {% endblock %}
+
+
+    {% block prompt %}
+    <b>注册 我的笔记 </b>
+    {% endblock %}
+
+    {% block form %}
+    <form action="." method="post">
+        {% csrf_token %}
+
+        <!--{{ form.as_p }}-->
+        <p>
+            <label for="{{ form.username.id_for_label }}"> 用户名 :</label>
+            {{ form.username }}
+        </p>
+
+        <p>
+            <label for="{{ form.email.id_for_label }}">邮  箱 :</label>
+            {{ form.email }}
+            <!--<input type="email" name="email" id="{{ form.email.id_for_label }}" maxlength="254" placeholder="邮箱地址"/>-->
+        </p>
+
+        <p>
+            <label for="{{ form.password.id_for_label }}">密  码:</label>
+            {{ form.password }}
+        </p>
+
+        <p>
+            <label for="{{ form.password.id_for_label }}">确认密码 :</label>
+            {{ form.password2 }}
+        </p>
+
+        {{ profile.as_p }}
+        <!--<p>-->
+            <!--<label for="{{ profile.birth.id_for_label }}">生  日:</label>-->
+            <!--{{ profile.birth }}-->
+        <!--</p>-->
+
+        <!--<p>-->
+            <!--<label for="{{ profile.phone.id_for_label }}">电  话:</label>-->
+            <!--{{ profile.phone }}-->
+        <!--</p>-->
+        <!--{{ form.username }}-->
+
+
+        <!--{{ form.as_p }}-->
+        <!--<input type="email" placeholder="{}"/>-->
+        <!--<br>-->
+        <!--<input type="password" name="password" placeholder="请输入您的密码"/>-->
+        <!--<br>-->
+        <!--<button class="button button1"><a href="register.html" class="register">注册</a></button>-->
+        <button class="button button1">注册</button>
+
+    </form>
+    {% endblock %}

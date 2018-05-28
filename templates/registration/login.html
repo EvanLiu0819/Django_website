@@ -1,0 +1,23 @@
+{% extends '../base_login.html' %}
+    {% block title %}
+    <title>Blog login</title>
+    {% endblock %}
+
+
+    {% block prompt %}
+    <b>登陆到 我的笔记 </b>
+    {% endblock %}
+
+    {% block form %}
+    <form action="{% url 'account:user_login' %}" method="post">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+        <!--<input type="email" name="email" placeholder="请输出您的邮箱"/>-->
+        <!--<br>-->
+        <!--<input type="password" name="password" placeholder="请输入您的密码"/>-->
+        <!--<br>-->
+        <!--<button class="button button1"><a href="register.html" class="register">注册</a></button>-->
+        <button class="button button1">登陆</button>
+    </form>
+    {% endblock %}
